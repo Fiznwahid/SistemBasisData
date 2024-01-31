@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        p {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1>PENGANTAR SQL</h1>
+    <h2>1. Bahasa Definisi Data (DDL)</h2>
+    <p>Bahasa Definisi Data (DDL) dalam sistem basis data adalah kumpulan perintah yang digunakan untuk mendefinisikan struktur basis data, termasuk membuat, mengubah, dan menghapus objek-objek basis data seperti tabel, indeks, dan skema. DDL mencakup perintah seperti CREATE, ALTER, dan DROP. DDL tidak berinteraksi langsung dengan data itu sendiri, tetapi mendefinisikan "wadah" tempat data disimpan.</p>
+    <p>Objektivitas dari Bahasa Definisi Data (DDL) terletak pada fungsinya untuk mendefinisikan struktur basis data secara eksplisit dan tidak ambigu. DDL menyediakan cara standar untuk mendefinisikan tabel, kolom, jenis data, dan objek basis data lainnya, memastikan bahwa struktur database dapat dipahami dan diinterpretasikan secara konsisten oleh sistem manajemen basis data (DBMS) dan pengguna. Objektivitas ini penting untuk integritas dan konsistensi data dalam sistem basis data.</p>
+    <h4>Objek dari database biasanya meliputi:</h4>
+    <ol type="a">
+        <li>Tabel: Tempat penyimpanan data dalam baris dan kolom.</li>
+        <li>Query: Permintaan untuk mengambil data tertentu dari database.</li>
+        <li>Form: Antarmuka yang memudahkan pengguna dalam memasukkan dan memodifikasi data.</li>
+        <li>Laporan (Report): Penyajian data dalam format yang terorganisir untuk analisis atau keperluan informasi.</li>
+        <li>Indeks: Struktur yang membantu meningkatkan kecepatan pengambilan data.</li>
+        <li>View: Representasi virtual dari satu atau lebih tabel.</li>
+        <li>Stored Procedure: Kumpulan perintah SQL yang disimpan untuk menjalankan operasi database yang kompleks.</li>
+        <li>Trigger: Skrip yang otomatis dijalankan sebagai respons terhadap peristiwa tertentu dalam database.</li>
+    </ol>
+    <h2>a. Tabel</h2>
+    <h4>Cara create tabel pada oracle :</h4>
+    <p>Oracle adalah salah satu sistem manajemen basis data terkemuka di dunia, dan cara membuat tabel di Oracle merupakan salah satu langkah penting dalam proses pengelolaan data. Tabel adalah struktur dasar yang digunakan untuk menyimpan data dalam basis data Oracle. Setiap tabel terdiri dari kolom dan baris. Kolom mewakili atribut-atribut yang mendefinisikan data yang akan disimpan, sedangkan baris berisi data yang sebenarnya. Dengan membuat tabel, Anda dapat mengatur dan mengelola data dengan efisien. Langkah-langkah cara create tabel di oracle adalah sebagai berikut : </p>
+    <ol type="1">
+        <li>Menyiapkan perintah create tabel</li>
+        <p>Perintah CREATE TABLE digunakan untuk membuat tabel di Oracle. Anda perlu menentukan nama tabel dan kolom-kolom yang akan ada dalam tabel tersebut. Berikut adalah contoh sintaks perintah CREATE TABLE:</p>
+        <img src="Gambar7.png" alt="" height="300cm" width="360cm">
+        <p>Pastikan untuk mengganti nama_tabel, kolom1, kolom2, dan seterusnya dengan nama yang relevan untuk tabel dan kolom.</p>
+        <li>Menentukan tipe data kolom</li>
+        <ol type="I">
+            <li>Setiap kolom dalam tabel perlu memiliki tipe data yang sesuai. Oracle menyediakan berbagai tipe data yang dapat Anda gunakan, termasuk NUMBER, VARCHAR2, DATE, dan lainnya. Berikut adalah beberapa contoh tipe data umum yang digunakan dalam Oracle:</li><br>
+                <ul type="disc">
+                    <li>NUMBER: Digunakan untuk menyimpan angka.</li>
+                    <li>VARCHAR2: Digunakan untuk menyimpan teks dengan panjang variabel.</li>
+                    <li>DATE: Digunakan untuk menyimpan tanggal dan waktu.</li>
+                </ul>
+            </ol>
+        <h4>dapat memilih tipe data yang sesuai dengan jenis data yang akan disimpan dalam kolom.</h4>
+        <li>Menentukan kendala (constraint)</li> 
+        <p>Kendala atau constraints digunakan untuk memberikan aturan tambahan terhadap data yang disimpan dalam tabel. Beberapa kendala umum yang dapat Anda terapkan adalah:</p>
+         <ul type="disc">
+            <li>PRIMARY KEY: Mengidentifikasi kolom atau kombinasi kolom yang unik untuk mengidentifikasi secara unik setiap baris dalam tabel.</li>
+            <li>FOREIGN KEY: Membuat hubungan antara kolom dalam tabel saat ini dengan kolom dalam tabel lain.</li>
+            <li>NOT NULL: Mencegah kolom dari menerima nilai NULL.</li>
+            <li>UNIQUE: Membatasi nilai yang diizinkan dalam kolom menjadi unik.</li>
+            <li>CHECK: Menggunakan kondisi logika untuk membatasi nilai yang diizinkan dalam kolom.</li>
+         </ul>  
+        <h4>dapat menentukan kendala yang diperlukan untuk memastikan integritas data dalam tabel.</h4>
+        <li>Menjalankan perintah create tabel</li>
+        <p>Setelah telah menyiapkan perintah CREATE TABLE dengan semua rincian yang diperlukan, Anda perlu menjalankan perintah tersebut di Oracle. Dapat menggunakan antarmuka pengguna grafis seperti Oracle SQL Developer atau menjalankan perintah SQL melalui lingkungan baris perintah seperti SQL*Plus.Pastikan memiliki hak akses yang diperlukan untuk membuat tabel di basis data yang sesuai sebelum menjalankan perintah.</p>
+        <li>Verifikasi tabel yang dibuat</li>
+        <p>Setelah perintah CREATE TABLE dijalankan, Anda dapat memverifikasi apakah tabel telah berhasil dibuat di Oracle. Anda dapat menggunakan perintah DESCRIBE atau SELECT untuk melihat struktur tabel dan memastikan kolom-kolom yang diinginkan telah dibuat dengan benar.</p>
+        <h4>Misalnya, Anda dapat menggunakan perintah berikut untuk melihat struktur tabel:</h4>
+    </ol>
+    <img src="Gambar8.png" alt="" height="300cm" width="380cm">
+    <footer>
+        <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+    </footer>
+</body>
+</html>

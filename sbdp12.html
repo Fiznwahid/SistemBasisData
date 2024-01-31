@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        p {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1 align="center">SQL - SELECT</h1>
+    <h3>Statement SELECT dasar</h3>
+    <ul type="disc">
+        <li>SELECT mengidentifikasi kolom yang akan ditampilkan</li>
+        <li>FROM mengidentifikasi tabel yang berisi kolom tersebut</li>
+    </ul>
+    <img src="Gambar9.png" alt="" width="410cm">
+    <h3>Memilih Semua Kolom</h3>
+    <ul type="disc">
+        <li>Semua kolom tabel dapat ditampilkan dengan menempatkan * setelah kata kunci SELECT</li>
+    </ul>
+    <img src="Gambar10.png" alt="" width="400cm">
+    <h3>Memilih Kolom Spesifik - Proyeksi</h3>
+    <ul type="disc">
+        <li>Anda dapat menggunakan pernyataan SELECT untuk menampilkan kolom tertentu dari tabel dengan menunjukkan nama kolom sesuai urutan yang ingin anda lihat, dipisahkan dengan koma</li>
+    </ul>
+    <h3>Menulis Statement SQL</h3>
+    <ul type="disc">
+        <li>Dengan menggunakan aturan dan panduan sederhana yang ditunjukkan di bawah ini, anda dapat Menyusun pernyataan yang valid yang mudah dibaca dan diedit</li>
+        <ul type="square">
+            <li>Statement SQL tidak peka huruf besar/kecil</li>
+            <li>Statement SQL dapat dimasukkan pada satu baris atau lebih</li>
+            <li>Kata kunci tidak dapat disingkat atau dipisah barisnya dan biasanya dieja dengan huruf besar</li>
+            <li>Klausa biasanya ditempatkan pada baris terpisah</li>
+            <li>Indent digunakan untuk meningkatkan keterbacaan</li>
+            <li>Di Application Express, pernyataan SQL dapat dihentikan dengan titik koma (;) namun tidak wajib</li>
+        </ul>
+    </ul>
+    <h3>Skenario Kasus: Mengambil Data</h3>
+    <img src="Gambar11.png" alt="" width="400cm">
+    <h3>Ekspresi Artimatika</h3>
+    <ul type="disc">
+        <li>Buat Ekspresi dengan data angka dan tanggal dengan menggunakan operator aritmatika</li>
+        <li>Nama kolom, konstanta numerik, dan operator aritmatika dapat digunakan dalam ekspresi aritmatika</li>
+        <li>Operator aritmatika dapat digunakan dalam klausa pernyataan SQL kecuali FROM</li>
+    </ul>
+    <img src="Gambar12.png" alt="" width="400cm">
+    <h3>Menggunakan Operator Aritmatika</h3>
+    <ul type="disc">
+        <li>Disini, operator penambahan digunakan untuk menghitung kenaikan gaji sebesar $300 untuk semua Karyawan</li>
+        <li>SALARY+300 ditampilkan sebagai Judul Kolom</li>
+    </ul>
+    <img src="Gambar13.png" alt="" width="400cm">
+    <h3>Pendahulu Operator</h3>
+    <ul type="disc">
+        <li>Gunakan tanda kurung untuk menegaskan urutan standar pendahulu dan untuk meningkatkan kejelasan </li>
+    <img src="Gambar14.png" alt="" width="350cm">
+    <li>Anda dapat mengabaikan aturan pendahulu dengan menggunakan tanda kurung untuk menentukan urutan penjabaran operator</li>
+    <img src="Gambar15.png" alt="" width="350cm">
+    </ul>
+    <h3>Menentukan nilai Null</h3>
+    <ul type="disc">
+        <li>Null adalah nilai yang tidak tersedia, tidak ditetapkan, tidak diketahui, atau tidak berlaku</li>
+        <li>Null tidak sama dengan nol atau spasi kosong</li>
+    <img src="Gambar16.png" alt="" width="350cm">
+    </ul>
+    <h3>Nilai Null dalam Ekspresi Aritmatika</h3>
+    <ul type="disc">
+        <li>Ekspresi Aritmatika yang berisi nilai Null akan dievaluasi ke Null</li>
+    <img src="Gambar17.png" alt="" width="350cm">
+    </ul>
+    <h3>Menentukan alias kolom</h3>
+    <ol type="A">
+        <li>Alias kolom</li>
+        <ul type="disc">
+            <li>Mengganti nama kolom judul</li>
+            <li>Berguna dengan penghitungan</li>
+            <li>Segera mengikuti nama kolom (dapat juga kata kunci AS opsional antara nama kolom dan alias)</li>
+            <li>Memerlukan tanda kutip ganda jika berisi spasi atau karakter khusus, atau jika peka huruf besar/kecil, defaultnya semua adalah huruf besar</li>
+        </ul>
+    </ol>
+    <h3>Menggunakan Alias Kolom</h3>
+    <ul type="disc">
+        <li>Kata Kunci AS bersifat opsional</li>
+        <li>Nama kolom muncul dalam huruf besar secara default</li>
+        <img src="Gambar18.png" alt="" width="350cm">
+        <li>Nama kolom yang disertakan dalam tanda kurung akan muncul saat dimasukkan</li>
+        <img src="Gambar19.png" alt="" width="350cm">
+    </ul>
+    <h3>Operator Rangkaian</h3>
+    <ul type="disc">
+        <li>Menautkan kolom atau string karakter ke kolom lain</li>
+        <li>Dinyatakan dengan 2 bilah vertical (||)</li>
+        <li>Membuat kolom yang merupakan ekspresi karakter</li>
+        <img src="Gambar20.png" alt="" width="350cm">
+    </ul>
+    <h3>String Karakter Literal</h3>
+    <ul type="disc">
+        <li>Literal adalah karakter, angka, atau tanggal yang disertakan dalam pernyataan SELECT</li>
+        <li>Nilai literal Tanggal dan karakter harus ditutup dengan tanda kutip tunggal</li>
+        <li>Setiap string karakter akan dikeluarkan sekali untuk setiap baris yang dihasilkan</li>
+    </ul>
+    <h3>Menggunakan String Karakter Literal</h3>
+    <ul type="disc">
+        <li>Dalam contoh, last name dan job_id untuk setiap Karyawan digabungkan dengan literal agar baris yang dihasilkan lebih bermakna</li>
+        <img src="Gambar21.png" alt="" width="350cm">
+    </ul>
+    <h3>Operator Penawaran (q) Alternatif</h3>
+    <ul type="disc">
+        <li>Banyak pernyataan SQL menggunakan literal karakter dalam ekspresi atau kondisi</li>
+        <li>Jika literal itu sendiri berisi tanda kutip tunggal, anda dapat menggunakan operator penawaran (q) dan memilih sendiri pemisah tanda kutip – dalam tanda kurung kotak ini []</li>
+        <img src="Gambar22.png" alt="" width="350cm">
+    </ul>
+    <h3>Skenario Kasus: Menggunakan Alias Kolom</h3>
+    <img src="Gambar23.png" alt="" width="400cm">
+    <h3>Skenario Kasus: Menggunakan Pernyataan SELECT</h3>
+    <img src="Gambar24.png" alt="" width="400cm">
+    <h3>Baris Duplikat</h3>
+    <img src="Gambar25.png" alt="" width="400cm">
+    <h3>Menampilan Struktur Tabel</h3>
+    <ul type="disc">
+        <li>Gunakan perintah DESCRIBE untuk menampilkan struktur tabel, termasuk nama kolom, jenis data, dan nullabilitas</li>
+        <li>Atau, pilih APEX Object Browser dalam SQL Workshop untuk melihat struktur tabel</li>
+        <li>Anda juga dapat mengeklik tombol Find Tables pada APEX SQL Commands untuk melihat struktur tabel</li>
+    </ul>
+    <img src="Gambar26.png" alt="" width="400cm">
+    <h3>Menggunakan Perintah Describe</h3>
+    <img src="Gambar27.png" alt="" width="400cm">
+    <footer>
+        <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+    </footer>
+</body>
+</html>

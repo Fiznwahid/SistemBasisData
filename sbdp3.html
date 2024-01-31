@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        p {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        h2 {
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1 align="center">PEMODELAN DATA : HUBUNGAN, ERD </h1>
+    <p>Dalam konteks basis data, hubungan (relationship) dan foreign key adalah dua konsep yang berbeda, tetapi mereka saling terkait dan penting untuk memahami struktur dan integritas data dalam basis data. Berikut ini adalah definisi dan contoh-contoh dari kedua konsep tersebut.</p>
+    <h2>1. Hubungan (Relationship)</h2>
+    <p>Hubungan (relationship) dalam konteks basis data merujuk pada cara data dalam tabel-tabel yang berbeda terkait atau berinteraksi satu sama lain. Hubungan ini mencerminkan bagaimana data dalam tabel-tabel tersebut saling terkait dan bagaimana informasi dapat diekstraksi dari tabel-tabel tersebut untuk memenuhi kebutuhan pengguna.</p>
+    <h4>Ada beberapa jenis hubungan yang umum ditemukan dalam basis data:</h4>
+    <h4>a. One-to-One (1:1):</h4>
+    <p>Dalam hubungan one-to-one, satu baris dalam satu tabel berhubungan dengan satu baris dalam tabel lain. Ini adalah jenis hubungan yang jarang ditemui dan biasanya digunakan dalam situasi khusus. Contohnya, tabel "Person" dapat memiliki hubungan one-to-one dengan tabel "Passport," di mana setiap orang memiliki satu paspor.</p>
+    <h4>b. One-to-Many (1:N):</h4>
+    <p>Dalam hubungan one-to-many, satu baris dalam satu tabel berhubungan dengan banyak baris dalam tabel lain. Contohnya, tabel "Author" dapat memiliki hubungan one-to-many dengan tabel "Books," di mana satu penulis dapat memiliki banyak buku yang terkait dengannya.</p>
+    <h4>c. Many-to-One (N:1):</h4>
+    <p>Dalam hubungan many-to-one, banyak baris dalam satu tabel berhubungan dengan satu baris dalam tabel lain. Ini adalah hubungan yang merupakan kebalikan dari one-to-many. Contohnya, tabel "Books" dapat memiliki hubungan many-to-one dengan tabel "Publisher," di mana banyak buku diterbitkan oleh satu penerbit.</p>
+    <h4>d. Many-to-Many (N:N):</h4>
+    <p>Dalam hubungan many-to-many, banyak baris dalam satu tabel berhubungan dengan banyak baris dalam tabel lain. Contohnya, tabel "Students" dapat memiliki hubungan many-to-many dengan tabel "Courses," di mana banyak mahasiswa dapat mendaftar untuk banyak kursus, dan sebaliknya.</p>
+    <br>
+    <p>Hubungan dalam basis data membantu mengorganisir data dengan cara yang memungkinkan pengguna untuk mengambil informasi yang diperlukan dengan efisien. Untuk mengimplementasikan hubungan dalam basis data, biasanya digunakan konsep foreign key (kunci asing) yang menghubungkan entitas atau baris dalam tabel satu dengan tabel lainnya.</p>
+    <p>Penting untuk merancang hubungan dengan baik dalam basis data agar data tetap konsisten, dan operasi seperti penambahan, pembaruan, dan penghapusan data dapat dilakukan dengan benar. Selain itu, pemeliharaan integritas referensial dan pengoptimalan query juga menjadi pertimbangan penting dalam merancang hubungan dalam basis data. Berikut ini adalah beberapa contoh hubungan (relationship) dalam basis data beserta skema tabelnya:</p>
+    <h5 align="center">Contoh 1 : Hubungan One To Many (1 : N)</h5>
+    <img src="ss3.png" alt="" height="300cm" width="400cm">
+    <img src="ss2.png" alt="" height="300cm" width="400cm">
+    <p>Dalam contoh ini, tabel "Customers" memiliki hubungan one-to-many dengan tabel "Orders." Setiap pelanggan (Customer) dapat memiliki banyak pesanan (Orders), tetapi setiap pesanan hanya terkait dengan satu pelanggan.</p>
+    <h5 align="center">Contoh 2 : Hubungan Many to One (N : 1)</h5>
+    <img src="ss4.png" alt="" height="300cm" width="400cm">
+    <img src="ss5.png" alt="" height="300cm" width="400cm">
+    <p>Dalam contoh ini, tabel "Reviews" memiliki hubungan many-to-one dengan tabel "Products." Banyak ulasan (Reviews) dapat terkait dengan satu produk (Product), tetapi setiap produk hanya terkait dengan satu ulasan tertentu.</p>
+    <h5 align="center">Contoh 3 : Hubungan Many to Many</h5>
+    <img src="ss6.png" alt="" height="300cm" width="400cm">
+    <p>Dalam contoh ini, tabel "Enrollments" digunakan sebagai tabel pivot untuk menghubungkan banyak mahasiswa (Students) dengan banyak kursus (Courses). Ini adalah contoh hubungan many-to-many, di mana banyak mahasiswa dapat mendaftar untuk banyak kursus, dan sebaliknya. Semua contoh ini menggambarkan berbagai jenis hubungan yang dapat ada dalam basis data, dan penggunaan yang tepat dari kunci asing (foreign key) dapat digunakan untuk mengimplementasikan hubungan ini dalam basis data.</p>
+    <h2>2. Pemodelan Hubungan Entitas (ERD)</h2>
+    <p>Pemodelan Hubungan Entitas (Entity Relationship Modeling), atau disingkat ERD, adalah teknik yang digunakan dalam desain basis data untuk menggambarkan hubungan antara berbagai entitas atau objek dalam sistem. ERD membantu menggambarkan struktur data dan bagaimana entitas berinteraksi satu sama lain dalam basis data. Berikut adalah beberapa konsep utama dalam ERD:</p>
+    <ol type="a">
+        <li>Entitas (Entity): Entitas adalah objek, konsep, atau elemen utama yang memiliki atribut yang menggambarkan ciri-ciri atau properti mereka. Misalnya, dalam sistem manajemen perguruan tinggi, entitas mungkin mencakup "Mahasiswa," "Dosen," dan "Mata Kuliah."</li>
+        <li>Atribut (Attribute): Atribut adalah properti atau karakteristik yang menggambarkan entitas. Setiap entitas memiliki sejumlah atribut yang berkaitan dengannya. Misalnya, entitas "Mahasiswa" dapat memiliki atribut seperti "Nama," "NIM," "Alamat," dll.</li>
+        <li>Hubungan (Relationship): Hubungan menggambarkan bagaimana entitas berinteraksi satu sama lain. Hubungan ini bisa menjadi satu ke satu, satu ke banyak, atau banyak ke banyak. Contohnya, mahasiswa dapat mendaftar dalam banyak mata kuliah, yang menunjukkan hubungan banyak ke banyak antara "Mahasiswa" dan "Mata Kuliah."</li>
+        <li>Kunci Utama (Primary Key): Kunci utama adalah atribut atau kelompok atribut yang unik mengidentifikasi setiap baris dalam entitas. Ini memastikan bahwa setiap entitas memiliki identifikasi unik. Sebagai contoh, "NIM" dalam entitas "Mahasiswa" bisa menjadi kunci utama.</li>
+        <li>Kunci Asing (Foreign Key): Kunci asing adalah atribut dalam suatu entitas yang merupakan kunci utama dari entitas lain. Ini digunakan untuk menghubungkan dua atau lebih entitas dalam ERD. Misalnya, dalam entitas "Transaksi," "ID_Pelanggan" bisa menjadi kunci asing yang merujuk ke kunci utama "Pelanggan."</li>
+        <li>Entitas Khususasi (Specialization): Ini adalah proses membagi entitas umum menjadi sub-entitas yang lebih spesifik. Misalnya, entitas "Kendaraan" dapat dibagi menjadi "Mobil" dan "Sepeda Motor."</li>
+        <li>Agregasi: Agregasi adalah hubungan yang digunakan untuk menggambarkan entitas yang terhubung dengan entitas lain secara keseluruhan. Misalnya, dalam ERD sistem perpustakaan, "Penerbit" bisa menjadi entitas agregat yang terdiri dari banyak "Buku."</li>
+        <li>Notasi ERD: ERD biasanya digambarkan dengan menggunakan notasi grafis yang terdiri dari entitas (kotak), atribut (elips), hubungan (garis dengan berbagai panah dan notasi), kunci utama (garis bawah atau ganda), dan kunci asing (garis putus-putus).</li>
+    </ol>
+    <p>Contoh ERD adalah alat yang berguna dalam desain basis data karena membantu para desainer dan pengembang untuk memahami struktur data, hubungan antar entitas, dan kebutuhan basis data secara keseluruhan. ERD sering digunakan sebagai dasar untuk membuat skema basis data yang konkret dalam bahasa seperti SQL.</p>
+    <h2>3. Simbol Entity Relationship Modelling (ERD)</h2>
+    <p>ERD adalah singkatan dari "Entity Relationship Diagram" atau dalam Bahasa Indonesia sering disebut "Diagram Hubungan Entitas." ERD adalah alat visual yang digunakan dalam pemodelan basis data untuk menggambarkan hubungan antara entitas (objek atau konsep) dalam sebuah sistem atau aplikasi. Diagram ini digunakan untuk menggambarkan struktur data, atribut-atribut entitas, dan bagaimana entitas-entitas tersebut saling terkait.</p>
+    <h4>ERD terdiri dari beberapa komponen penting:</h4>
+    <ol type="a">
+        <li>Entitas (Entity): Entitas adalah objek atau konsep utama yang ada dalam sistem atau aplikasi. Misalnya, dalam basis data perpustakaan, entitas dapat mencakup "Buku," "Peminjam," dan "Pustakawan."</li>
+        <li>Atribut (Attribute): Atribut adalah karakteristik atau properti yang menggambarkan entitas. Setiap entitas memiliki sejumlah atribut yang menjelaskan informasi tentang entitas tersebut. Misalnya, atribut "Judul" dan "Penulis" adalah atribut yang mungkin ada dalam entitas "Buku."</li>
+        <li>Hubungan (Relationship): Hubungan menggambarkan bagaimana entitas-entitas saling berinteraksi atau terhubung satu sama lain dalam basis data. Hubungan ini dapat berupa hubungan satu ke satu, satu ke banyak, atau banyak ke banyak. Misalnya, hubungan antara "Peminjam" dan "Buku" menggambarkan bahwa seorang peminjam dapat meminjam banyak buku, tetapi setiap buku dapat dipinjam oleh banyak peminjam.</li>
+        <li>Kunci Utama (Primary Key): Kunci utama adalah atribut atau kelompok atribut yang unik mengidentifikasi setiap baris dalam entitas. Ini memastikan bahwa setiap entitas memiliki identifikasi unik.</li>
+        <li>Kunci Asing (Foreign Key): Kunci asing adalah atribut dalam sebuah entitas yang merupakan kunci utama dari entitas lain. Ini digunakan untuk menghubungkan entitas-entitas dalam basis data.</li>
+    </ol>
+    <p>ERD membantu pemodel basis data untuk memvisualisasikan dan merancang struktur basis data dengan jelas dan memahami bagaimana entitas-entitas dalam sistem berinteraksi. ERD sering digunakan sebagai langkah awal dalam desain basis data sebelum implementasi skema basis data dalam bahasa SQL atau bahasa basis data lainnya. ERD dapat digunakan untuk berbagai tujuan, termasuk desain sistem informasi, dokumentasi basis data, komunikasi antara pengembang, analisis kebutuhan pengguna, dan lain-lain. Diagram ini dapat digambar dengan menggunakan perangkat lunak pemodelan basis data khusus atau dengan bantuan perangkat lunak grafis umum seperti Microsoft Visio. Entity Relationship Diagram atau ERD adalah suatu gambaran grafis yang mewakili logika database secara lengkap dan mendetail, dimana antar database membentuk entitas yang terhubung satu sama lain. Database disini dapat disebut sebagai atribut dalam ERD.</p>
+    <h2>A. Fungsi ERD</h2>
+    <h5>ERD memiliki fungsi yang dapat dikembangkan perancangan suatu sistem, berikut adalah pembahasannya :</h5>
+    <ol type="1">
+        <li>Dapat memudahkan dalam melakukan analisis sebuah database melalui cara yang cepat dan simpel.</li>
+        <li>Dapat menjalankan hubungan antar data yang mempunyai keterkaitan berdasarkan suatu objek yang terhubung dalam suatu relasi.</li>
+        <li>Mendokumentasikan data yang terdapat dalam database dengan melakukan analisis serta identifikasi dari setiap objek atau entitas dan relasinya.</li>
+        <li>Dapat melakukan uji pada model yang telah dibuat.</li>
+    </ol>
+    <h2>B. Model Data pada ERD</h2>
+    <h5>Secara umum 3 model data yang ada pada ERD adalah ; konseptual, logis, dan fisik. Berikut adalah pembahasannya:</h5>
+    <ol type="1">
+        <li>Model Data Konseptual, merupakan suatu model ER tertinggi yang didalamnya berisi data secara detail. Model ini juga bisa digunakan untuk mendefinisikan entitas data dari referensi utama yang digunakan oleh suatu organisasi.</li>
+        <li>Model data logis, yaitu model ER yang mengandung data yang lebih rinci dari model konseptual.</li>
+        <li>Model data fisik, yaitu suatu model ER yang dikembangkan dari model data logis untuk dijadikan sebagai database.</li>
+    </ol>
+    <h2>C. Notasi, Komponen, dan Simbol pada ERD</h2>
+    <h5>Pemahaman mengenai notasi, komponen, dan simbol dalam ERD adalah hal yang penting untuk merancang ERD yang urut dan benar. Berikut ini adalah pembahasannya.</h5>
+    <img src="ss9.png" alt="" height="300cm" width="400cm">
+    <img src="ss8.png" alt="" height="300cm" width="400cm">
+    <img src="ss7.png" alt="" height="300cm" width="400cm">
+    <h5>Berdasarkan simbol ERD dan keterangan dari notasi diatas, dapat dijelaskan sebagai berikut </h5>
+    <ol type="1">
+        <li>Simbol persegi panjang menggambarkan suatu entitas.</li>
+        <li>Bentuk belah ketupat menggambarkan suatu relasi atau proses</li>
+        <li>Bentuk lingkaran atau elips menggambarkan suatu atribut</li>
+        <li>Garis dapat menggambarkan suatu hubungan atau penghubung.</li>
+    </ol>
+    <h2>D. Cara Membuat ERD</h2>
+    <h5>Dalam membuat ERD diagram dapat memperhatikan berbagai tahapan atau metodologi. Berikut adalah cara atau tahapan yang bisa Anda lakukan untuk membuat ERD diagram.</h5>
+    <ol type="1">
+        <li>Menentukan entitas dengan cermat, teliti, dan baik terlebih dahulu untuk menjawab persoalan yang ada.</li>
+        <li>Selanjutnya menentukan relasi antar entitas untuk mengetahui hubungan antar entitas.</li>
+        <li>Mulai menggambar ERD yang bersifat sementara, hal ini dimaksudkan bahwa penggambaran ERD adalah untuk memberikan deskripsi secara umum terlebih dahulu.</li>
+        <li>Membuat kardinalitas untuk menentukan jumlah dari kejadian.</li>
+        <li>Menentukan kata kunci utama dalam sebuah entitas.</li>
+        <li>Gambarlah ERD berdasarkan kunci utama.</li>
+        <li>Menentukan atribut yang dibutuhkan dalam setiap entitas yang telah ditentukan sebelumnya.</li>
+        <li>Menggambar ERD dengan lengkap bersama atribut yang ada.</li>
+        <li>Lakukan pemeriksaan dan evaluasi terhadap hasil, jika ditemukan kekeliruan maka dapat mengulang langkah sebelumnya.</li>
+    </ol>
+    <footer>
+        <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+    </footer>
+</body>
+</html>

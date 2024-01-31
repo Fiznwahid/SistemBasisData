@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        p {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1 align="center">Mengurutkan Data Menggunakan ORDER BY dan Menggabungkan Tabel Menggunakan JOIN</h1>
+    <h2>1. Perintah Order By dan Group By</h2>
+    <p>Order by adalah perintah yang digunakan untuk mengurutkan data pada table secara ascending (menaik) atau descending (menurun). Misalkan kita memiliki tabel Karyawan seperti ini:</p>
+    <img src="Gambar28.png" alt="" width="410cm">    
+    <h3> Untuk Menampilkan tabel diatas urut berdasarkan Nama dari A-Z (ascending) perintahnya adalah:</h3>
+    <h5>select Kode,</h5>
+    <h5>Nama,</h5>
+    <h5>Gaji from </h5>
+    <h5>Karyawan</h5>
+    <h5>order by Nama;</h5>
+    <h3>Perintah diatas akan menampilkan hasil seperti ini:</h3>
+    <img src="Gambar29.png" alt="" width="410cm">
+    <h5>select</h5>
+    <h5>Kode,Nama,</h5>
+    <h5>Gaji from </h5>
+    <h5>Karyawan</h5>
+    <h5>order by Nama DESC;</h5>
+    <h3>Bisa juga memodifikasinya dengan perintah Where. Misal saja anda hanya ingin menampilkan data karyawan bergaji > 100000 dan urut Kode dari besar ke kecil (descending), maka anda gunakan perintah ini:</h3>
+    <h5>select Kode,Nama,Gaji</h5> 
+    <h5>from Karyawan</h5>
+    <h5>where gaji > 100000 </h5>
+    <h5>order by Kode DESC;</h5>
+    <h3>Hasilnya akan tampak seperti ini:</h3>
+    <img src="Gambar30.png" alt="" width="400cm">
+    <h3>Tampilkan nim,nama, jenjang (dari table Mahasiswa), dimana jenjangnya = S1 dan diurutkan berdasarkan nama mahasiswa secara Descending, maka perintahnya adalah:</h3>
+    <h5>SELECT nim,nama, jenjang</h5>
+    <h5>FROM Mahasiswa WHERE jenjang=‘S1’ </h5>
+    <h5>ORDER BY nama DESC</h5>
+    <ol type="a">
+        <li>Group By</li>
+        <p>Pemakaian perintah select selain dapat digabungkan dengan anak kalimat ORDER BY yang bertujuan untuk mengurutkan data, juga dapat digabungkan dengan anak kalimat GROUP BY yang bertujuan untuk mengelompokkan data (record) yang sama. Pada kasus sederhana anak kalimat GROUP BY berfungsi seperti perintah DISTINCT, kelebihan GROUP BY adalah dapat digunakan bersama dengan fungsi agregate yang beroperasi pada seluruh record yang akan digabung untuk membentuk satu record (baris) tunggal.</p>
+        <p>SQL GROUP BY sering digunakan pada fungsi agregat seperti (COUNT(), MAX(), MIN(), SUM(), AVG()).</p>
+        <ul type="square">
+            <li>Sintak group by</li>
+            <p>SELECT column_name(s) FROM table_name WHERE condition GROUP BY column_name(s) ORDER BY column_name(s);</p>
+            <img src="Gambar31.png" alt="" width="320cm">
+            <h5>Contoh penerapan</h5>
+            <ol type="a">
+                <li>Menampilkan jumlah customer di setiap Negara</li>
+                <h3>SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country</h3>
+                <img src="Gambar32.png" alt="" width="280cm">
+                <li>Menampilkan jumlah customer dari setiap Negara diurutkan dari bawah z- a.SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country ORDER BY COUNT(CustomerID) DESC;</li>
+                <img src="Gambar33.png" alt="" width="280cm">
+            </ol>
+        </ul>
+        <li>Fungsi Agregat</li>
+            <p>Kelompok fungsi ini digunakan untuk suatu nilai, dengan kualifikasi yang merupakan hasil dari perhitungan sekelompok baris data atau table. Pada table 2, disajikan fungsi agregat yang memiliki kualifikasi tersendiri untuk menghasilkan suatu nilai tertentu.</p>
+            <img src="Gambar34.png" alt="" width="350cm">
+    </ol>
+    <ol type="1">
+        <li>AVG</li>
+        <h5>Contoh penerapan ∙ Mencari rata-rata jumlah beli(quantity) dari tabel orderdetail</h5>
+        <h4>SELECT AVG(column_name)FROM table_name WHERE condition;</h4>
+        <img src="Gambar35.png" alt="" width="350cm">
+        <li>SELECT AVG(Quantity) FROM OrderDetails;</li>
+        <h5>Hasilnya:</h5>
+        <img src="Gambar36.png" alt="" width="350cm">
+    </ol>
+    <ol type="1">
+        <li>COUNT</li>
+        <ol type="a">
+            <li>Sintak</li>
+            <p>SELECT COUNT(column_name)FROM table_name WHERE condition;</p>
+            <li>Contoh penerapan ∙ Menghitung jumlah record dari tabel produk</li>
+            <img src="Gambar37.png" alt="" width="320cm">
+            <h4>SELECT COUNT(ProductID) FROM Products;</h4>
+            <h5>Hasilnya:</h5>
+            <img src="Gambar38.png" alt="" width="320cm">
+        </ol>
+        <li>MAX</li>
+        <ol type="a">
+            <li>Sintak</li>
+            <h4>SELECT MAX(column_name)FROM table_name;</h4>
+            <li>Contoh penerapan ∙ Mencari Quantity terbesar dari tabel order detail</li>
+            <img src="Gambar39.png" alt="" width="320cm">
+        </ol>
+    </ol>
+    <img src="Gambar40.png" alt="" width="350cm">
+    <img src="Gambar41.png" alt="" width="350cm">
+    <h4>JOIN TABLE</h4>
+    <h5>JOIN merupakan perintah di MySQL untuk menggabungkan 2 table atau lebih berdasarkan kolom yang sama</h5>
+    <h4>JOIN di MySQL dibagi menjadi 3 cara</h4>
+    <ol type="1">
+        <li>INNER JOIN</li>
+        <li>LEFT JOIN</li>
+        <li>RIGHT JOIN</li>
+    </ol>
+    <h4>Sebelum kita melanjutkan pembahasan tentang join kita akan membuat 2 table yaitu table mahasiswa dan transaksi.</h4>
+    <h5>Table mahasiswa -> Data mahasiswa</h5>
+    <h5>Table transaksi -> Data transaksi peminjaman buku perpus</h5>
+    <h5>CREATE TABLE mahasiswa (<br>
+        nim INT(10),<br>
+        nama VARCHAR(100),<br>
+        alamat VARCHAR(100), PRIMARY KEY(nim) <br>
+        );
+    </h5>
+    <h5>CREATE TABLE transaksi (<br>
+        id_transaksi INT(10), nim INT(10),<br>
+        buku VARCHAR(100),<br>
+        PRIMARY KEY(id_transaksi)br
+        );
+    </h5>
+    <h5>Masukkan data untuk table mahasiswa dan transaksi :</h5>
+    <h5>INSERT INTO mahasiswa</h5>
+    <h5>VALUES</h5>
+    <h5>(21400200,"faqih","bandung"),<br>
+        (21400201,"ina","jakarta"),<br>
+        (21400202,"anto","semarang"),<br>
+        (21400203,"dani","padang"),<br>
+        (21400204,"jaka","bandung"),<br>
+        (21400205,"nara","bandung"),<br> 
+        (21400206,"senta","semarang");
+        </h5>
+        <h5>INSERT INTO transaksi</h5>
+        <h5>VALUES <br>
+            (1,21400200,"Buku Informatika"),<br>
+            (2,21400202,"Buku Teknik Elektro"),<br> (3,21400203,"Buku Matematika"),<br> (4,21400206,"Buku Fisika"),<br> (5,21400207,"Buku Bahasa Indonesia"),<br> (6,21400210,"Buku Bahasa Daerah"),<br> (7,21400211,"Buku Kimia");
+            </h5>
+            <h5>SELECT * FROM mahasiswa;</h5>
+            <h5>
+                | nim	| nama | alamat	|<br>
+                |
+                21400200
+                |
+                faqih
+                |
+                bandung
+                |<br>
+                |
+                21400201
+                |
+                ina
+                |
+                jakarta
+                |<br>
+                |
+                21400202
+                |
+                anto
+                |
+                semarang
+                |<br>
+                |
+                21400203
+                |
+                dani
+                |
+                padang
+                |<br>
+                |
+                21400204
+                |
+                jaka
+                |
+                bandung
+                |<br>
+                |
+                21400205
+                |
+                nara
+                |
+                bandung
+                |<br>
+                |
+                21400206
+                |
+                senta
+                |
+                semarang
+                |<br>
+                </h5>
+                <h5>7 rows in set (0.00 sec)</h5>
+                <h5>SELECT * FROM transaksi;</h5>
+                <h5>| nim	| nama | alamat	|<br>
+                    |
+                    21400200
+                    |
+                    faqih
+                    |
+                    bandung
+                    |<br>
+                    |
+                    21400201
+                    |
+                    ina
+                    |
+                    jakarta
+                    |<br>
+                    |
+                    21400202
+                    |
+                    anto
+                    |
+                    semarang
+                    |<br>
+                    |
+                    21400203
+                    |
+                    dani
+                    |
+                    padang
+                    |<br>
+                    |
+                    21400204
+                    |
+                    jaka
+                    |
+                    bandung
+                    |<br>
+                    |
+                    21400205
+                    |
+                    nara
+                    |
+                    bandung
+                    |<br>
+                    |
+                    21400206
+                    |
+                    senta
+                    |
+                    semarang
+                    |<br>
+                </h5>
+                <h5>SELECT * FROM transaksi;</h5>
+                <h5>| id_transaksi | nim	| buku	|<br>
+                    |
+                    1
+                    |
+                    21400200
+                    |
+                    Buku
+                    Informatika
+                    |<br>
+                    |
+                    2
+                    |
+                    21400202
+                    |
+                    Buku
+                    Teknik Elektro
+                    |<br>
+                    |
+                    3
+                    |
+                    21400203
+                    |
+                    Buku
+                    Matematika
+                    |<br>
+                    |
+                    4
+                    |
+                    21400206
+                    |
+                    Buku
+                    Fisika
+                    |<br>
+                    |
+                    5
+                    |
+                    21400207
+                    |
+                    Buku
+                    Bahasa Indonesia
+                    |<br>
+                    |
+                    6
+                    |
+                    21400210
+                    |
+                    Buku
+                    Bahasa Daerah
+                    |<br>
+                    |
+                    7
+                    |
+                    21400211
+                    |
+                    Buku
+                    Kimia
+                    |
+                    </h5>
+                    <h5>7 rows in set (0.00 sec)</h5>
+                    <h5>INNER JOIN</h5>
+                    <h5>INNER JOIN membandingkan record di setiap table untuk dicek apakah nilai sama atau tidak.</h5>
+                    <h5>Jika nilai kedua table sama maka akan terbentuk table baru yang hanya menampilkan record yang sama dari kedua table</h5>
+                    <h5>Cara penulisannya</h5>
+                    <h5>SELECT *<br>
+                        FROM table1 <br>
+                        INNER JOIN table2 <br>
+                        ON table1.field = table2.field;
+                        </h5>
+                        <h5>Contoh, Mencari data dari table mahasiswa dan tranksaksi berdasarkan kolom NIM</h5>
+                        <h5>SELECT * <br>
+                            FROM mahasiswa <br>
+                            INNER JOIN transaksi <br>
+                            ON mahasiswa.nim = transaksi.nim
+                            </h5>
+                            <h5>| nim	| nama | alamat	| id_transaksi | nim	| buku <br>
+                                |
+                                | 21400200 | faqih | bandung |	1 | 21400200 | Buku Informatika <br>
+                                |
+                                | 21400202 | anto | semarang |	2 | 21400202 | Buku Teknik Elektro |<br>
+                                | 21400203 | dani | padang	|	3 | 21400203 | Buku Matematika <br>
+                                |
+                                | 21400206 | senta | semarang |	4 | 21400206 | Buku Fisika 
+                                |
+                                </h5>
+                                <h5>4 rows in set (0.00 sec)</h5>
+                                <h5>Table mahasiswa mempunyai 7 record dan table transaksi mempunyai 7 record</h5>
+                                <h5>Jika menggabungkan kedua data menggunakan INNER JOIN berdasarkan kolom NIM maka hanya tampil 4 data mahasiswa yang meminjam buku di perpustakaan.</h5>
+                                <h5>LEFT JOIN</h5>
+                                <h5>LEFT JOIN menghasilkan nilai berdasarkan table kiri (table1) dan nilai yang sama di table kanan (table2).</h5>
+                                <h5>Jika table kanan tidak nilainya ada maka akan diisi nilai NULL</h5>
+                                <h5>SELECT *<br>
+                                    FROM table1 <br>
+                                    LEFT JOIN table2 <br>
+                                    ON table1.field = table2.field;
+                                    </h5>
+                                    <h5>Contoh, Mencari data dari table mahasiswa dan tranksaksi berdasarkan kolom NIM</h5>
+                                    <h5>SELECT * <br>
+                                        FROM mahasiswa <br>
+                                        LEFT JOIN transaksi <br>
+                                        ON mahasiswa.nim = transaksi.nim;
+                                        </h5>
+                                        <h5>| nim	| nama | alamat	| id_transaksi | nim	| buku
+                                            |
+                                            | 21400200 <br>
+                                            |
+                                            | 21400202 <br>
+                                            |
+                                            | 21400203 <br>
+                                            |
+                                            | 21400206 <br>
+                                            |
+                                            | 21400201 <br>
+                                            |
+                                            | 21400204 <br>
+                                            |
+                                            | 21400205
+                                            </h5>
+                                            <h5>7 rows in set (0.00 sec)</h5>
+                                            <p>Table kiri (mahasiswa) akan menjadi table master dan mencari nilai yang sama di table transaksi. Apabila ada mahasiswa yang tidak meminjam buku maka diberi nilai NULL.</p>
+                                            <h5>RIGHT JOIN</h5>
+                                            <h5>Konsep RIGHT JOIN hampir sama seperti LEFT JOIN hanya yang menjadi master adalah table kanan (table 2)</h5>
+                                            <h5>|
+                                                faqih
+                                                |
+                                                bandung
+                                                |
+                                                1
+                                                |
+                                                21400200
+                                                |
+                                                Buku
+                                                Informatika
+                                                |<br>
+                                                anto
+                                                |
+                                                semarang
+                                                |
+                                                2
+                                                |
+                                                21400202
+                                                |
+                                                Buku
+                                                Teknik
+                                                |<br>
+                                                dani
+                                                |
+                                                padang
+                                                |
+                                                3
+                                                |
+                                                21400203
+                                                |
+                                                Buku
+                                                Matematika
+                                                |<br>
+                                                senta
+                                                |
+                                                semarang
+                                                |
+                                                4
+                                                |
+                                                21400206
+                                                |
+                                                Buku
+                                                Fisika
+                                                | <br>
+                                                ina
+                                                |
+                                                jakarta
+                                                |
+                                                NULL
+                                                |
+                                                NULL
+                                                |
+                                                NULL
+                                                <br>
+                                                |
+                                                jaka
+                                                |
+                                                bandung
+                                                |
+                                                NULL
+                                                |
+                                                NULL
+                                                |
+                                                NULL <br>
+                                                |
+                                                nara
+                                                |
+                                                bandung
+                                                |
+                                                NULL
+                                                |
+                                                NULL
+                                                |
+                                                NULL
+                                                </h5>
+                                                <h5>RIGHT JOIN</h5>
+                                                <h5>Jika table kiri tidak nilainya ada maka akan diisi nilai NULL.</h5>
+                                                <h5>SELECT * <br>
+                                                    FROM table1 <br>
+                                                    RIGHT JOIN table2 <br>
+                                                    ON table1.field = table2.field;
+                                                    </h5>
+                                                    <h5>Contoh, Mencari data dari table mahasiswa dan tranksaksi berdasarkan kolom NIM</h5>
+                                                    <h5>SELECT * <br>
+                                                        FROM mahasiswa <br>
+                                                        RIGHT JOIN transaksi <br>
+                                                        ON mahasiswa.nim = transaksi.nim;
+                                                        </h5>
+                                                        <h5>| nim	| nama | alamat	| id_transaksi | nim	| buku <br>
+                                                            |
+                                                            | 21400200 <br>
+                                                            |
+                                                            | 21400202 <br>
+                                                            |
+                                                            | 21400203 <br>
+                                                            |</h5>
+                                                            <h5>7 rows in set (0.00 sec)</h5>
+                                                            <h5>Terdapat 7 transaksi peminjaman buku di perpustakaan. Bagi transaksi yang NIM mahasiswa tidak ada di table mahasiswa akan diberi nilai NULL.</h5>
+<footer>
+    <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+</footer>
+</body>
+</html>

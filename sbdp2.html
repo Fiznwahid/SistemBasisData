@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        li {
+            text-transform: capitalize;
+            
+        }
+        h4 {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        h3 {
+            text-transform: capitalize;
+
+        }
+        .paragraf1 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf2 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf3 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf4 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf5 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf6 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf7 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf8 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf9 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf10 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf11 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        .paragraf12 {
+            text-indent: 30px;
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1 align="center">Data Relasional</h1>
+    <h2>1. DEFINISI DATABASE RELASIONAL</h2>
+    <h4>Database relasional adalah tipe database yang didasarkan pada model data relasional. Model data ini menggunakan tabel (atau relasi) sebagai entitas utama untuk menyimpan dan mengelola data. Database relasional menyimpan data dalam bentuk tabel yang terdiri dari baris dan kolom. Setiap tabel mewakili jenis entitas tertentu, dan setiap baris dalam tabel mewakili satu catatan atau tupel data. Sementara itu, kolom dalam tabel mewakili atribut atau field yang mendefinisikan jenis data yang disimpan.</h4>
+<h3>Beberapa karakteristik utama dari database relasional meliputi:</h3>
+<ol type="A">
+    <li>Tabel: Data disimpan dalam tabel yang terdiri dari baris dan kolom. Setiap tabel memiliki nama unik dan harus memiliki kolom kunci utama (primary key) yang unik untuk mengidentifikasi setiap baris.</li>
+    <li>Kunci Utama (Primary Key): Kolom kunci utama adalah kolom yang memiliki nilai unik untuk setiap baris dalam tabel. Ini digunakan untuk mengidentifikasi secara unik setiap tupel dalam tabel.</li>
+    <li>Hubungan: Database relasional memungkinkan untuk menghubungkan tabel berdasarkan nilai kunci utama. Ini menciptakan hubungan antara tabel, yang memungkinkan Anda untuk mengakses dan mengambil data dari berbagai tabel dengan menggabungkan informasi dari tabel yang berbeda.</li>
+    <li>Normalisasi: Normalisasi adalah proses desain database yang mengorganisasi data ke dalam tabel dengan cara yang mengurangi redundansi dan meningkatkan efisiensi penyimpanan dan pemutakhiran data.</li>
+    <li>SQL (Structured Query Language): SQL adalah bahasa yang digunakan untuk mengelola dan mengambil data dari database relasional. Dengan SQL, Anda dapat membuat, mengedit, dan menghapus data, serta mengambil data sesuai dengan kriteria tertentu.</li>
+    <li>Integritas Data: Database relasional mendukung integritas data dengan menggunakan berbagai jenis kendala, seperti kunci referensi (foreign keys) dan kendala unik (unique constraints), untuk memastikan bahwa data tetap konsisten dan benar.</li>
+    <li>Transaksi: Database relasional mendukung konsep transaksi, yang memungkinkan untuk mengelola operasi yang melibatkan beberapa tindakan dalam database dengan benar. Transaksi harus bersifat atomik (terjadi sepenuhnya atau tidak sama sekali), konsisten (database berada dalam keadaan yang benar sebelum dan setelah transaksi), terisolasi (transaksi tidak saling berpengaruh), dan tahan terhadap kegagalan (bahkan dalam kasus kegagalan sistem).</li>
+</ol>
+    <h4>Database relasional adalah salah satu tipe database yang paling umum digunakan di seluruh dunia dan digunakan dalam berbagai aplikasi dan sistem, termasuk sistem manajemen basis data (Database Management System atau DBMS) seperti MySQL, PostgreSQL, Microsoft SQL Server, dan Oracle Database.</h4>
+    <h2>2. Model Data konseptual dan fisik</h2>
+    <h4>Model data dalam database relasional terdiri dari tiga tingkat: model data konseptual, model data logis, dan model data fisik. Setiap tingkat ini memiliki fokus dan abstraksi yang berbeda dalam merancang dan mengelola basis data.</h4>
+    <p>&nbsp;a. Model Data Konseptual</p>
+    <ol type="1">
+    <li>Model data konseptual adalah tingkat tertinggi dalam perancangan database relasional.</li>
+    <li>Ini merupakan representasi abstrak dari seluruh database dan tidak terkait dengan detail teknis seperti tabel atau indeks.</li>
+    <li>Model data konseptual menggambarkan struktur data secara umum, entitas utama, hubungan antara entitas, dan atribut utama dari database.
+        Salah satu alat yang digunakan untuk menggambarkan model data konseptual adalah Entity-Relationship Diagram (ERD), yang menggambarkan entitas (tabel) dan hubungan antara entitas tersebut secara konseptual.</li>
+    <li>Salah satu alat yang digunakan untuk menggambarkan model data konseptual adalah Entity-Relationship Diagram (ERD), yang menggambarkan entitas (tabel) dan hubungan antara entitas tersebut secara konseptual.</li>
+    </ol>
+    <p>&nbsp;b. Model Data Logis</p>
+    <ol type="1">
+        <li>Model data logis berada di tingkat yang lebih rendah dibandingkan dengan model data konseptual.</li>
+        <li>Ini berfokus pada cara data disimpan dan diorganisasi dalam database, termasuk tabel, kolom, dan hubungan antara tabel.</li>
+        <li>Model data logis menciptakan struktur data yang sesuai dengan kebutuhan aplikasi atau sistem, dan seringkali mengikuti model data konseptual.</li>
+        <li>Pada tingkat ini, pemodelan data menggunakan diagram Entitas-Relasi yang lebih rinci, yang mencakup atribut entitas dan relasi antar entitas.</li>
+    </ol>
+    <p>&nbsp;c. Model Data Fisik</p>
+    <ol type="1">
+        <li>Model data fisik adalah tingkat terendah dalam perancangan database relasional.</li>
+        <li>Ini berfokus pada cara data sebenarnya disimpan di perangkat keras komputer, termasuk bagaimana tabel disimpan dalam bentuk file, indeks dibuat, dan struktur penyimpanan data lainnya.</li>
+        <li>Pemilihan tipe data, indeks, partisi, dan optimalisasi kinerja adalah aspek penting dari model data fisik.</li>
+        <li>Model data fisik akan sangat bergantung pada sistem manajemen basis data (DBMS) yang digunakan, seperti Oracle, MySQL, atau Microsoft SQL Server.</li>
+    </ol>
+    <h4>Penting untuk memahami perbedaan antara ketiga tingkat ini dalam perancangan database. Model data konseptual adalah abstrak dan lebih berfokus pada representasi data secara keseluruhan, sementara model data logis dan fisik lebih terkait dengan implementasi teknis di tingkat tabel dan penyimpanan fisik. Transformasi dari model data konseptual ke model data logis dan akhirnya ke model data fisik merupakan langkah-langkah yang diperlukan dalam merancang dan mengimplementasikan database relasional yang efisien dan sesuai dengan kebutuhan aplikasi.</h4>
+    <br>
+    <h2>2.1 Model Data Konseptual</h2>
+    <p class="paragraf1">Model data konseptual adalah representasi abstrak dari seluruh database yang digunakan untuk menggambarkan struktur data secara umum tanpa memperhatikan detail teknis terkait dengan cara data disimpan atau diakses. Model data konseptual mencerminkan pandangan tingkat tinggi tentang bagaimana data diorganisasi dan bagaimana entitas dan hubungan antara entitas direpresentasikan dalam basis data. Dalam model data konseptual, fokus utamanya adalah pada entitas (yang biasanya menggambarkan objek di dunia nyata atau dalam konteks aplikasi) dan hubungan antara entitas tersebut. Model data konseptual biasanya menggunakan notasi seperti Entity-Relationship Diagrams (ERD) atau notasi konseptual lainnya untuk menggambarkan:</p>
+    <ol type="a">
+        <li>Entitas: Objek, konsep, atau objek dunia nyata yang memiliki atribut yang dapat disimpan dalam database. Contoh entitas bisa berupa "Mahasiswa," "Buku," atau "Karyawan."</li>
+        <li>Atribut: Informasi yang terkait dengan entitas tertentu. Misalnya, atribut untuk entitas "Mahasiswa" bisa mencakup "Nama," "NIM," "Alamat," dan lain-lain.</li>
+        <li>Hubungan: Keterkaitan antara entitas. Hubungan ini dapat dinyatakan sebagai "One-to-One" (satu-satu), "One-to-Many" (satu-ke-banyak), atau "Many-to-Many" (banyak-ke-banyak), dan mereka memiliki kardinalitas yang dapat dijelaskan.</li>
+        <li>Kunci: Kunci adalah atribut atau kombinasi atribut yang digunakan untuk mengidentifikasi setiap instance dari entitas secara unik. Kunci utama (Primary Key) adalah kunci yang paling sering digunakan.</li>
+    </ol>
+    <p class="paragraf2">Model data konseptual membantu dalam pemahaman struktur data secara keseluruhan dan hubungan antara entitas dalam database tanpa memperhatikan aspek teknis implementasi. Ini adalah langkah awal dalam perancangan database relasional, dan berfungsi sebagai landasan untuk mengembangkan model data logis dan fisik yang lebih rinci serta implementasi database sebenarnya dalam sistem manajemen basis data (DBMS).</p>
+    <h2>2.2 Model Data Fisik</h2>
+    <p class="paragraf3">Model data fisik adalah representasi teknis dan rinci dari cara data disimpan dan diakses dalam sistem manajemen basis data (DBMS) atau dalam lingkungan penyimpanan fisik yang sesungguhnya. Model data fisik berfokus pada aspek teknis dan implementasi dari sebuah basis data, termasuk struktur penyimpanan, indeks, konfigurasi perangkat keras, dan optimasi kinerja.</p>
+    <br>
+    <p>Berikut beberapa hal yang tercakup dalam model data fisik:</p>
+    <ol type="a">
+        <li>Tabel dan Kolom: Model data fisik menggambarkan bagaimana tabel-tabel yang ada dalam database relasional diimplementasikan dalam penyimpanan fisik. Ini mencakup informasi tentang nama tabel, kolom, tipe data kolom, dan batasan integritas data.</li>
+        <li>Indeks: Model data fisik mencakup indeks yang dibuat untuk mendukung pencarian dan pengambilan data yang efisien. Indeks membantu meningkatkan kinerja query dengan mempercepat pencarian data dalam tabel.</li>
+        <li>Partisi: Dalam beberapa DBMS, model data fisik mencakup informasi tentang bagaimana tabel dapat dipecah menjadi partisi yang lebih kecil. Partisi memungkinkan manajemen dan kinerja data yang lebih baik.</li>
+        <li>Cluster dan Fragmentasi: Model data fisik dapat merinci apakah ada pengelompokan (clustering) atau fragmentasi data yang diterapkan pada tabel atau kolom tertentu.</li>
+        <li>Tabel Temporer: Model data fisik dapat mencakup tabel-temporer yang digunakan untuk penyimpanan data sementara dalam operasi tertentu.</li>
+        <li>Konfigurasi Perangkat Keras: Ini termasuk informasi tentang lokasi fisik database (misalnya, server mana yang digunakan), spesifikasi perangkat keras, dan pengaturan yang diperlukan untuk menjalankan DBMS.</li>
+        <li>Optimasi Kinerja: Model data fisik mencakup strategi dan konfigurasi yang digunakan untuk mengoptimalkan kinerja database. Ini dapat mencakup pengaturan cache, tuning query, dan indeks yang tepat.</li>
+        <li>Rencana Backup dan Restore: Informasi tentang bagaimana data disimpan dan dilakukan backup serta prosedur pemulihan jika terjadi kegagalan.</li>
+    </ol>
+    <p class="paragraf4">Model data fisik berada di lapisan terbawah dalam hierarki perancangan basis data. Ini memberikan pandangan teknis yang sangat spesifik tentang bagaimana data diolah, disimpan, dan diakses. Biasanya, perancangan basis data dimulai dengan model data konseptual, kemudian diterjemahkan menjadi model data logis, dan akhirnya diimplementasikan sebagai model data fisik dalam DBMS.</p>
+    <h2>3. Entitas dan Atribut</h2>
+    <p class="paragraf5">Dalam konteks database relasional, entitas dan atribut adalah dua komponen utama yang digunakan untuk mendefinisikan dan mengorganisasi data. Ini adalah konsep dasar dalam perancangan dan pengelolaan database. Mari kita bahas keduanya secara lebih rinci:</p>
+    <p>&nbsp;a. Entitas</p>
+    <ol type="1">
+        <li>Entitas mengacu pada objek, konsep, atau entitas dunia nyata yang ingin direpresentasikan dalam database. Ini bisa berupa objek fisik seperti "Mahasiswa," "Buku," atau "Karyawan," atau bahkan konsep abstrak seperti "Transaksi" atau "Pesanan."</li>
+        <li>Dalam model data konseptual, entitas direpresentasikan sebagai tabel dalam database relasional. Setiap baris dalam tabel ini mewakili satu instance atau catatan dari entitas tersebut.</li>
+        <li>Setiap entitas biasanya memiliki atribut yang menggambarkan karakteristik atau properti unik dari entitas tersebut. Sebagai contoh, entitas "Mahasiswa" mungkin memiliki atribut "NIM," "Nama," "Alamat," dan "Tanggal Lahir."</li>
+    </ol>
+    <p>&nbsp;b. Atribut</p>
+    <ol type="1">
+        <li>Atribut adalah karakteristik atau properti dari entitas yang mendefinisikan data yang dapat disimpan dalam entitas tersebut. Atribut menggambarkan informasi yang relevan tentang entitas tersebut.</li>
+        <li>Dalam konteks database relasional, atribut direpresentasikan sebagai kolom dalam tabel yang sesuai dengan entitas. Setiap kolom akan memiliki nama dan tipe data yang menentukan jenis data yang dapat disimpan dalam atribut tersebut.</li>
+        <li>Sebagai contoh, untuk entitas "Mahasiswa," atribut-atributnya mungkin termasuk:</li>
+    </ol>
+    <ol type="a">
+        <li>"NIM" (Nomor Induk Mahasiswa) dengan tipe data string.</li>
+        <li>"Nama" dengan tipe data string.</li>
+        <li>"Alamat" dengan tipe data string.</li>
+        <li>"Tanggal Lahir" dengan tipe data tanggal.</li>
+    </ol>
+    <p class="paragraf6">Penting untuk merencanakan dengan cermat entitas dan atribut dalam perancangan database relasional. Identifikasi entitas yang tepat dan atribut-atribut yang diperlukan adalah langkah pertama dalam merancang struktur basis data yang efektif. Selain itu, entitas dan atribut membentuk dasar untuk menciptakan tabel-tabel dalam basis data relasional dan untuk mengatur relasi antar tabel. Hubungan antara entitas dan atribut juga menciptakan struktur data yang terorganisasi dengan baik yang dapat mendukung pengambilan data dan analisis yang efisien.</p>
+    <h2>4. Keyword / Pengenal Unik</h2>
+    <p class="paragraf7">Keyword atau pengenal unik adalah istilah yang digunakan dalam berbagai konteks untuk merujuk pada kata, frasa, atau simbol yang memiliki sifat unik atau istimewa dalam suatu konteks tertentu. Pengenal unik ini digunakan untuk mengidentifikasi atau membedakan entitas atau elemen tertentu dalam suatu sistem atau domain.</p>
+    <br>
+    <p>Berikut beberapa contoh penggunaan keyword atau pengenal unik dalam berbagai konteks:</p>
+    <p>&nbsp;a. Pengenalan Programming</p>
+    <p class="paragraf8">Dalam pemrograman, pengenal unik adalah nama yang digunakan untuk mengidentifikasi variabel, fungsi, kelas, atau objek dalam kode program. Setiap pengenal harus unik dalam konteksnya. Misalnya, dalam bahasa pemrograman C++, Anda harus memberikan nama variabel yang unik dalam lingkup yang sama, seperti:</p>
+    <img src="ss1.png" alt="" height="200cm" width="400cm">
+    <p>&nbsp;b. Pengenal Unik dan Basis Data</p>
+    <ol type="1">
+        <li>Dalam basis data, pengenal unik adalah atribut atau kombinasi atribut yang digunakan untuk mengidentifikasi setiap baris atau tupel dalam tabel secara unik. Ini dikenal sebagai kunci utama (primary key).</li>
+        <li>Sebagai contoh, dalam tabel "Mahasiswa," NIM (Nomor Induk Mahasiswa) dapat digunakan sebagai pengenal unik atau kunci utama.</li>
+    </ol>
+    <p>&nbsp;c. Pengenal Unik dalam SEO:</p>
+    <p class="paragraf9">Dalam konteks optimisasi mesin pencari (SEO), keyword adalah kata kunci atau frasa yang digunakan dalam konten web untuk meningkatkan peringkat dalam hasil mesin pencari. Ini membantu orang menemukan situs web atau konten yang relevan dengan pencarian mereka.</p>
+    <p>&nbsp;d. Pengenal Unik dalam Sistem Keamanan:</p>
+    <p class="paragraf10">Dalam keamanan komputer, pengenal unik sering digunakan dalam autentikasi, seperti kata sandi atau token yang hanya dikenal oleh pengguna yang sah.</p>
+    <p>&nbsp;e. Pengenal Unik dalam Matematika:</p>
+    <p class="paragraf11">Dalam matematika, pengenal unik dapat merujuk pada angka atau simbol yang digunakan untuk mengidentifikasi entitas tertentu, seperti identitas aljabar dalam teori grup.</p>
+    <p class="paragraf12">Pengenal unik adalah penting dalam banyak aspek kehidupan dan teknologi karena mereka membantu dalam pengidentifikasian dan pembedaan antara berbagai entitas atau elemen. Mereka memungkinkan sistem untuk mengelola, mengakses, dan mengambil data dengan efisien dan akurat.</p>
+    <footer>
+        <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+    </footer>
+</body>
+</html>

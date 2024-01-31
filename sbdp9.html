@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-top: solid;
+            border-left: solid;
+            border-right: solid;
+            border-bottom: solid;
+        }
+        p {
+            text-indent: 50px;
+            text-transform: capitalize;
+        }
+        header {
+            background-color: blue;
+            color: white;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center"><marquee >Catatan Kuliah Semester 1</h1></marquee>
+    </header>
+    <h1 align="center">MEMETAKAN MODEL FISIK DARI ERD</h1>
+    <p>Memetakan model fisik dari Entity Relationship Diagram (ERD) ke dalam skema basis data adalah langkah penting dalam proses desain basis data. Model fisik menggambarkan bagaimana entitas dan hubungan dalam ERD akan diimplementasikan secara nyata dalam sistem basis data. Proses ini meliputi pembuatan tabel, kolom, tipe data, kunci primer dan asing, serta mempertimbangkan batasan (constraints) dan indeks. Berikut ini adalah langkah-langkah umum untuk memetakan model fisik dari sebuah ERD:</p>
+    <h3>1. Membuat Tabel untuk Setiap Entitas</h3>
+    <ol type="a">
+        <li>Setiap entitas dalam ERD diwakili oleh sebuah tabel dalam basis data.</li>
+        <li>Nama tabel biasanya adalah bentuk jamak dari nama entitas.</li>
+    </ol>
+    <h3>2. Menambahkan Kolom untuk Atribut</h3>
+    <ol type="a">
+        <li>Setiap atribut dalam entitas menjadi kolom dalam tabel yang bersangkutan.</li>
+        <li>Tentukan tipe data untuk setiap kolom (seperti INT, VARCHAR, DATE, dll.).</li>
+    </ol>
+    <h3>3. Menentukan Kunci Primer</h3>
+    <ol type="a">
+        <li>Untuk setiap tabel, tentukan kunci primer (Primary Key, PK) yang unik mengidentifikasi setiap baris.</li>
+        <li>Kunci primer sering kali adalah atribut yang ditandai sebagai unik dalam ERD.</li>
+    </ol>
+    <h3>4. Mengimplementasikan Hubungan</h3>
+    <ol type="a">
+        <li>Hubungan antara entitas diwakili melalui penggunaan kunci asing (Foreign Key, FK).</li>
+        <li>Dalam hubungan satu-ke-banyak, tambahkan kunci asing ke tabel pada sisi "banyak".</li>
+        <li>Dalam hubungan banyak-ke-banyak, buat tabel penghubung yang berisi kunci asing dari kedua tabel yang terkait.</li>
+    </ol>
+    <h3>5. Menambahkan Batasan</h3>
+    <ol type="a">
+        <li>Batasan (constraints) digunakan untuk memastikan integritas data (seperti NOT NULL, UNIQUE, CHECK).</li>
+    </ol>
+    <h3>6. Menentukan Indeks</h3>
+    <ol type="a">
+        <li>Buat indeks pada kolom yang sering digunakan dalam pencarian atau join untuk meningkatkan performa.</li>
+    </ol>
+    <h3>7. Normalisasi</h3>
+    <ol type="a">
+        <li>Lakukan normalisasi untuk menghindari redundansi dan ketergantungan data.</li>
+        <li>Ini bisa termasuk pemisahan tabel menjadi tabel-tabel yang lebih kecil.</li>
+    </ol>
+    <h3>8. Merevisi dan Mengoptimalkan</h3>
+    <ol type="a">
+        <li>Ulas dan sesuaikan desain untuk kinerja, skalabilitas, dan manajemen.</li>
+    </ol>
+    <h5>Contoh Praktis</h5>
+    <p>Misalnya, kita memiliki ERD dengan entitas Mahasiswa dan Kuliah dengan hubungan banyak-ke-banyak. Maka, kita akan memiliki:</p>
+    <ol type="1">
+        <li>Tabel Mahasiswa dengan kolom seperti MahasiswaID (PK), Nama, Alamat.</li>
+        <li>Tabel Kuliah dengan kolom seperti KuliahID (PK), NamaKuliah, SKS.</li>
+        <li>Tabel penghubung Pendaftaran dengan MahasiswaID (FK) dan KuliahID (FK).</li>
+    </ol>
+    <p>Setiap langkah dalam memetakan ERD ke model fisik harus mempertimbangkan kebutuhan spesifik dari sistem yang akan dikembangkan, termasuk pertimbangan kinerja dan keamanan.</p>
+    <h1 align="center">ANALISA MODEL FISIK DARI ERD</h1>
+    <p>Analisis model fisik dari Entity-Relationship Diagram (ERD) melibatkan konversi struktur data yang terdefinisi dalam ERD ke dalam tabel, kolom, kunci, dan hubungan yang spesifik dalam sistem manajemen basis data. Berikut ini adalah contoh analisis model fisik dari sebuah ERD sederhana:</p>
+    <h5>Contoh ERD:</h5>
+    <p>Misalkan kita memiliki ERD dengan entitas-entitas berikut:</p>
+    <ol>
+        <li>Mahasiswa (dengan atribut: MahasiswaID, Nama, TanggalLahir, Alamat)</li>
+        <li>Kuliah (dengan atribut: KuliahID, NamaKuliah, SKS)</li>
+        <li>Pendaftaran (sebagai entitas hubungan antara Mahasiswa dan Kuliah dengan atribut: TanggalPendaftaran)</li>
+        <li>Hubungan antara Mahasiswa dan Kuliah adalah banyak-ke-banyak.</li>
+    </ol>
+    <h5>Analisis Model Fisik:</h5>
+    <h3>a. Tabel Mahasiswa</h3>
+    <ol type="1">
+        <li>Tabel : “Mahasiswa”</li>
+        <li>Kolom:</li>
+        <ol type="a">
+            <li>MahasiswaID (Primary Key, INT)</li>
+            <li>Nama (VARCHAR)</li>
+            <li>TanggalLahir (DATE)</li>
+            <li>Alamat (VARCHAR)</li>
+        </ol>
+    </ol>
+    <h3>b. Tabel Kuliah</h3>
+    <ol type="1">
+        <li>Tabel: Kuliah</li>
+        <li>Kolom:</li>
+        <ol type="a">
+            <li>KuliahID (Primary Key, INT)</li>
+            <li>NamaKuliah (VARCHAR)</li>
+            <li>SKS (INT)</li>
+        </ol>
+    </ol>
+    <h3>c. Tabel Pendaftaran</h3>
+    <ol type="1">
+        <li>Tabel: Pendaftaran</li>
+        <li>Kolom:</li>
+        <ol type="a">
+            <li>MahasiswaID (Foreign Key, INT, mengacu pada Mahasiswa)</li>
+            <li>KuliahID (Foreign Key, INT, mengacu pada Kuliah)</li>
+            <li>TanggalPendaftaran (DATE)</li>
+            <li>Kunci Primer: Kombinasi (MahasiswaID, KuliahID)</li>
+        </ol>
+    </ol>
+    <h3>Implementasi Hubungan:</h3>
+    <ol type="a">
+        <li>Tabel Pendaftaran menghubungkan Mahasiswa dan Kuliah, mencerminkan hubungan banyak-ke-banyak di antara mereka.</li>
+        <li>    MahasiswaID di tabel Pendaftaran adalah kunci asing yang mengacu pada MahasiswaID di tabel Mahasiswa.</li>
+        <li>KuliahID di tabel Pendaftaran adalah kunci asing yang mengacu pada KuliahID di tabel Kuliah.</li>
+        <li>Kombinasi (MahasiswaID, KuliahID) dalam tabel Pendaftaran mencegah duplikasi entri yang sama.</li>
+    </ol>
+    <h3>Normalisasi:</h3>
+    <p>Dalam analisis ini, basis data sudah dalam bentuk normalisasi yang baik, di mana setiap tabel mewakili satu entitas atau hubungan, dan tidak ada redundansi data yang tidak perlu.</p>
+    <h3>Batasan (Constraints):</h3>
+    <ol type="a">
+        <li> MahasiswaID dan KuliahID harus unik di tabel masing-masing.</li>
+        <li>MahasiswaID dan KuliahID di tabel Pendaftaran harus ada di tabel Mahasiswa dan Kuliah, masing-masing, untuk menjaga integritas referensial.</li>    
+    </ol>
+    <p>Analisis model fisik ini mengonversi struktur konseptual ERD menjadi skema basis data yang dapat diimplementasikan dalam sistem manajemen basis data. Setiap entitas menjadi tabel dengan atribut sebagai kolom, dan hubungan antar-entitas diwujudkan melalui penggunaan kunci asing.</p>
+    <footer>
+        <h1 align="center">&copy;HAFIZH NUR WAHID 2024</h1>
+    </footer>
+</body>
+</html>
